@@ -13,15 +13,16 @@
     $carlos->Escolaridade = "Ensino Médio";
 
     echo "Manipulando o objeto $carlos->Nome : <br>";
+    //Obs: ao acessar propriedade e metodos de um objetos dentro de string dupla " " e necessario utilizar-se de chaves ao redor da expressao
 
-    echo "{$carlos->Nome} é formado em: {$carlos->Escolaridade} <br/>";
+    echo " {$carlos->Nome} é formado em: {$carlos->Escolaridade} <br/> ";
     $carlos->Formar('Técnico em Eletricidade');
-    echo "{$carlos->Nome} é formado em: {$carlos->Escolaridade} <br/>";
+    echo " {$carlos->Nome} é formado em: {$carlos->Escolaridade} <br/> ";
 
 
-    echo "{$carlos->Nome} possui {$carlos->Idade} anos <br>";
+    echo " {$carlos->Nome} possui {$carlos->Idade} anos <br> ";
     $carlos->Envelhecer(1);
-    echo "{$carlos->Nome} possui {$carlos->Idade} anos <br>";
+    echo " {$carlos->Nome} possui {$carlos->Idade} anos <br> ";
 
     //criação do objeto $conta_carlos
     $conta_carlos = new Conta;
@@ -34,10 +35,10 @@
     $conta_carlos->Cancelada = false;
 
     echo "<br/>";
+    
+    echo " Manipulando a conta de: {$conta_carlos->Titular->Nome} <br/> ";
 
-    echo "Manipulando a conta de: {$conta_carlos->Titular->Nome} <br/>";
-
-    echo "O saldo atual é R\$ {$conta_carlos->ObterSaldo()} <br/>";
+    echo " O saldo atual é R\$ {$conta_carlos->ObterSaldo()} <br/>";
     $conta_carlos->Depositar(20);
     
     echo "O saldo atual é R\$ {$conta_carlos->ObterSaldo()} <br/>";
